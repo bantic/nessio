@@ -15,6 +15,12 @@
 		7555D13515EC10E5004B94CD /* NessioAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7555D13415EC10E5004B94CD /* NessioAppDelegate.m */; };
 		7555D13815EC10E5004B94CD /* NessioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7555D13715EC10E5004B94CD /* NessioViewController.m */; };
 		7555D13B15EC10E5004B94CD /* NessioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7555D13915EC10E5004B94CD /* NessioViewController.xib */; };
+		7555D14915EC1190004B94CD /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = 7555D14215EC1190004B94CD /* base64.c */; };
+		7555D14A15EC1190004B94CD /* NSData+SRB64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7555D14515EC1190004B94CD /* NSData+SRB64Additions.m */; };
+		7555D14B15EC1190004B94CD /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 7555D14815EC1190004B94CD /* SRWebSocket.m */; };
+		7555D15115EC1205004B94CD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7555D15015EC1205004B94CD /* CFNetwork.framework */; };
+		7555D15315EC1229004B94CD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7555D15215EC1229004B94CD /* Security.framework */; };
+		7555D15515EC124C004B94CD /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7555D15415EC124C004B94CD /* libicucore.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +37,16 @@
 		7555D13615EC10E5004B94CD /* NessioViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NessioViewController.h; sourceTree = "<group>"; };
 		7555D13715EC10E5004B94CD /* NessioViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NessioViewController.m; sourceTree = "<group>"; };
 		7555D13A15EC10E5004B94CD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NessioViewController.xib; sourceTree = "<group>"; };
+		7555D14215EC1190004B94CD /* base64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = base64.c; sourceTree = "<group>"; };
+		7555D14315EC1190004B94CD /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
+		7555D14415EC1190004B94CD /* NSData+SRB64Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SRB64Additions.h"; sourceTree = "<group>"; };
+		7555D14515EC1190004B94CD /* NSData+SRB64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SRB64Additions.m"; sourceTree = "<group>"; };
+		7555D14615EC1190004B94CD /* SocketRocket-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-Prefix.pch"; sourceTree = "<group>"; };
+		7555D14715EC1190004B94CD /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
+		7555D14815EC1190004B94CD /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
+		7555D15015EC1205004B94CD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		7555D15215EC1229004B94CD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		7555D15415EC124C004B94CD /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +54,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7555D15515EC124C004B94CD /* libicucore.dylib in Frameworks */,
+				7555D15315EC1229004B94CD /* Security.framework in Frameworks */,
+				7555D15115EC1205004B94CD /* CFNetwork.framework in Frameworks */,
 				7555D12515EC10E5004B94CD /* UIKit.framework in Frameworks */,
 				7555D12715EC10E5004B94CD /* Foundation.framework in Frameworks */,
 				7555D12915EC10E5004B94CD /* CoreGraphics.framework in Frameworks */,
@@ -67,6 +86,9 @@
 		7555D12315EC10E5004B94CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7555D15415EC124C004B94CD /* libicucore.dylib */,
+				7555D15215EC1229004B94CD /* Security.framework */,
+				7555D15015EC1205004B94CD /* CFNetwork.framework */,
 				7555D12415EC10E5004B94CD /* UIKit.framework */,
 				7555D12615EC10E5004B94CD /* Foundation.framework */,
 				7555D12815EC10E5004B94CD /* CoreGraphics.framework */,
@@ -77,6 +99,7 @@
 		7555D12A15EC10E5004B94CD /* Nessio */ = {
 			isa = PBXGroup;
 			children = (
+				7555D14115EC1190004B94CD /* SocketRocket */,
 				7555D13315EC10E5004B94CD /* NessioAppDelegate.h */,
 				7555D13415EC10E5004B94CD /* NessioAppDelegate.m */,
 				7555D13615EC10E5004B94CD /* NessioViewController.h */,
@@ -96,6 +119,20 @@
 				7555D13215EC10E5004B94CD /* Nessio-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7555D14115EC1190004B94CD /* SocketRocket */ = {
+			isa = PBXGroup;
+			children = (
+				7555D14215EC1190004B94CD /* base64.c */,
+				7555D14315EC1190004B94CD /* base64.h */,
+				7555D14415EC1190004B94CD /* NSData+SRB64Additions.h */,
+				7555D14515EC1190004B94CD /* NSData+SRB64Additions.m */,
+				7555D14615EC1190004B94CD /* SocketRocket-Prefix.pch */,
+				7555D14715EC1190004B94CD /* SRWebSocket.h */,
+				7555D14815EC1190004B94CD /* SRWebSocket.m */,
+			);
+			path = SocketRocket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +202,9 @@
 				7555D13115EC10E5004B94CD /* main.m in Sources */,
 				7555D13515EC10E5004B94CD /* NessioAppDelegate.m in Sources */,
 				7555D13815EC10E5004B94CD /* NessioViewController.m in Sources */,
+				7555D14915EC1190004B94CD /* base64.c in Sources */,
+				7555D14A15EC1190004B94CD /* NSData+SRB64Additions.m in Sources */,
+				7555D14B15EC1190004B94CD /* SRWebSocket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +318,7 @@
 				7555D14015EC10E5004B94CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

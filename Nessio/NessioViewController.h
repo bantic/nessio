@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SRWebSocket.h"
 
-@interface NessioViewController : UIViewController
-
+@interface NessioViewController : UIViewController <SRWebSocketDelegate>
+@property (nonatomic, strong) SRWebSocket *webSocket;
+@property (nonatomic, strong) NSArray *buttonNames;
+- (IBAction)doConnect:(id)sender;
+- (IBAction)buttonUp:(id)sender;
+- (IBAction)buttonDown:(id)sender;
+-(void)sendPressButton:(NSString *)buttonName;
+-(void)sendReleaseButton:(NSString *)buttonName;
 @end
